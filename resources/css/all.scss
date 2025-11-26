@@ -1,0 +1,126 @@
+.welcome-page {
+    background-color: #042431;
+    min-height: 100vh;
+    padding-top: 20vh;
+
+    .main-img {
+        width: 100%;
+        position: relative;
+
+        .logo {
+            position: absolute;
+            top: 22%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        p {
+            color: #05435C;
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 44px;
+            max-width: 450px;
+            text-align: center;
+            font-weight: 700;
+        }
+    }
+
+    .welcome-page-menu {
+        margin-top: 100px;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                padding: 40px 50px;
+                border-bottom: 1px solid #565656;
+                width: 100%;
+
+                a {
+                    color: white;
+                    font-size: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .welcome-page-footer {
+        >ul {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 1px solid #565656;
+            padding: 50px 0;
+            background-color: #011D28;
+
+            li {
+                padding: 20px 0;
+
+                a {
+                    font-size: 40px;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 30px;
+                    font-family: 'serif';
+
+                    svg {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            padding: 50px 0 70px 0;
+
+            li {
+                &:not(:last-child) {
+                    border-right: 1px solid #565656;
+                    padding-right: 50px;
+                }
+
+
+                a {
+                    color: white;
+                    font-size: 30px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+            }
+        }
+    }
+}
+
+header {
+    background-color: #EBE9E1;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 0 40px;
+}
