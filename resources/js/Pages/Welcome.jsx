@@ -3,16 +3,26 @@ import RightArrow from '../Icons/RightArrow';
 import EmailIcon from '../Icons/EmailIocn';
 import InstaIcon from '../Icons/InstaIcon';
 import PhoneIcon from '../Icons/PhoneIcon';
-import { Link } from '@inertiajs/react';
+import { Link, usePage } from '@inertiajs/react';
+import Toast from '../Components/Toast';
 
 export default function Welcome() {
+    const { successMessage, email } = usePage().props;
+
     return (
         <AppLayout>
+            {successMessage && (
+                <Toast
+                    message={successMessage}
+                    email={email}
+                    onClose={() => { }}
+                />
+            )}
             <div className='welcome-page'>
                 <div
                     className='main-img'
                     style={{
-                        height: '800px',
+                        height: '400px',
                         backgroundImage: "url('/img/welcome.png')",
                         backgroundSize: 'contain',
                         backgroundPosition: 'center center',
@@ -31,16 +41,16 @@ export default function Welcome() {
                             </Link>
                         </li>
                         <li>
-                            <a href="">
+                            <Link href="/send-letter">
                                 <div>Ուղարկել Նամակ</div>
                                 <RightArrow />
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="">
+                            <Link href="/blog">
                                 <div>Բլոգ</div>
                                 <RightArrow />
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -68,13 +78,13 @@ export default function Welcome() {
                     <footer>
                         <ul>
                             <li>
-                                <a href="">Մեր Մասին</a>
+                                <Link href="/about">Մեր Մասին</Link>
                             </li>
                             <li>
-                                <a href="">Դրույթներ</a>
+                                <Link href="/provisions">Դրույթներ</Link>
                             </li>
                             <li>
-                                <a href="">Գաղտնիություն</a>
+                                <Link href="/privacy">Գաղտնիություն</Link>
                             </li>
                         </ul>
                     </footer>

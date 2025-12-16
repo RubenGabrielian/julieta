@@ -10,14 +10,14 @@ export default function Create() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        post('/posts');
+        post('/admin/posts');
     };
 
     return (
         <AppLayout>
             <div style={{ padding: 40, maxWidth: '800px', margin: '0 auto' }}>
                 <Link
-                    href="/posts"
+                    href="/admin/dashboard"
                     style={{
                         display: 'inline-block',
                         marginBottom: '2rem',
@@ -26,7 +26,7 @@ export default function Create() {
                         fontWeight: '500'
                     }}
                 >
-                    ← Back to Posts
+                    ← Back to Dashboard
                 </Link>
 
                 <div style={{
@@ -142,7 +142,7 @@ export default function Create() {
                                 {processing ? 'Creating...' : 'Create Post'}
                             </button>
                             <Link
-                                href="/posts"
+                                href="/admin/dashboard"
                                 style={{
                                     padding: '0.75rem 1.5rem',
                                     borderRadius: '6px',

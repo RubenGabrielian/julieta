@@ -7,6 +7,26 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Admin Panel Setup
+
+To access the admin panel, you need to set up admin credentials in your `.env` file:
+
+```env
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=your_secure_password_here
+```
+
+**Default credentials** (if not set in `.env`):
+- Username: `admin`
+- Password: `admin123`
+
+**Important**: Make sure to change the default password in production!
+
+Once configured, access the admin panel at `/admin/login`. The admin panel allows you to:
+- View orders
+- View and create blog posts
+- Manage content
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

@@ -4,6 +4,8 @@
 <title>{{ config('app.name', 'Laravel') }}</title>
 <link rel="preload" href="/fonts/ArTarumianBarakU-Regular.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="preload" href="/fonts/ArTarumianBarakU-Bold.ttf" as="font" type="font/ttf" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     @viteReactRefresh
     @vite('resources/js/app.jsx')
     @vite('resources/css/app.css')
