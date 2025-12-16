@@ -7,6 +7,8 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminController;
 
+
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'successMessage' => session('success'),
@@ -77,3 +79,8 @@ Route::post('/admin/logout', [AdminController::class, 'logout'])->middleware('ad
 Route::middleware('admin')->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
 });
+
+
+
+
+

@@ -1,9 +1,12 @@
+import { Head } from '@inertiajs/react';
 import Header from '../Components/Header';
 import AppLayout from '../Layouts/AppLayout';
 
 export default function About() {
     return (
-        <AppLayout>
+        <>
+            <Head title="Մեր Մասին" />
+            <AppLayout>
             <Header title="Մեր Մասին" />
             <div className="static-page">
                 <h1>Առաքելություն</h1>
@@ -15,6 +18,7 @@ export default function About() {
                 </div>
             </div>
         </AppLayout>
+        </>
     );
 }
 
