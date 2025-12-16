@@ -5,6 +5,7 @@ import InstaIcon from '../Icons/InstaIcon';
 import PhoneIcon from '../Icons/PhoneIcon';
 import { Link, usePage } from '@inertiajs/react';
 import Toast from '../Components/Toast';
+import { route } from 'ziggy-js';
 
 export default function Welcome() {
     const { successMessage, email } = usePage().props;
