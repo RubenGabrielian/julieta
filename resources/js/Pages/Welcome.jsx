@@ -35,7 +35,7 @@ export default function Welcome() {
                 <div className='welcome-page-menu'>
                     <ul>
                         <li>
-                            <Link href="/letter-from-juliet">
+                            <Link href={route('letter-from-juliet')}>
                                 <div>Նամակ Ջուլիետից</div>
                                 <RightArrow />
                             </Link>
