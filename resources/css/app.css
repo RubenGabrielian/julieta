@@ -23,11 +23,20 @@
 
 @font-face {
     font-family: 'MontserratArm';
-    src: url('/fonts/MontserratArm-Regular.ttf') format('truetype');
+    src: url('/fonts/MontserratArm-Regular.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'MontserratArmBold';
+    src: url('/fonts/MontserratArm-Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 @theme {
     --font-arumian: 'ArTarumianBarakU', sans-serif;
