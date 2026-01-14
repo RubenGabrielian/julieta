@@ -7,7 +7,7 @@ export default function Header({ title }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleBack = () => {
-        window.history.back();
+        window.location.href = '/';
     };
 
     const toggleMenu = () => {

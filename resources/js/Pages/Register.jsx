@@ -64,11 +64,35 @@ export default function Register() {
 
     const isButtonDisabled = processing || !isFormValid;
 
+    // Handle input focus and value changes for border styling
+    const handleInputFocus = (e) => {
+        if (e.target.value.trim() !== '') {
+            e.target.classList.add('focused-filled');
+        }
+    };
+
+    const handleInputBlur = (e) => {
+        if (e.target.value.trim() !== '') {
+            e.target.classList.add('focused-filled');
+        } else {
+            e.target.classList.remove('focused-filled');
+        }
+    };
+
+    const handleInputChange = (e, field) => {
+        setData(field, e.target.value);
+        if (e.target.value.trim() !== '') {
+            e.target.classList.add('focused-filled');
+        } else {
+            e.target.classList.remove('focused-filled');
+        }
+    };
+
     return (
         <>
             <Head title="Գրանցում" />
             <AppLayout>
-                <Header title="Ձեր տվյալները" />
+                <Header title="Ձեր Տվյալները" />
                 {toastMessage && (
                     <Toast
                         message="success"
@@ -89,7 +113,9 @@ export default function Register() {
                                     name="name"
                                     placeholder="Անուն Ազգանուն"
                                     value={data.name}
-                                    onChange={(e) => setData('name', e.target.value)}
+                                    onChange={(e) => handleInputChange(e, 'name')}
+                                    onFocus={handleInputFocus}
+                                    onBlur={handleInputBlur}
                                     className={errors.name ? 'error' : ''}
                                 />
                                 {errors.name && <span className="error-message">{errors.name}</span>}
@@ -105,7 +131,9 @@ export default function Register() {
                                     name="phone"
                                     placeholder="+374 XX XXX XXX"
                                     value={data.phone}
-                                    onChange={(e) => setData('phone', e.target.value)}
+                                    onChange={(e) => handleInputChange(e, 'phone')}
+                                    onFocus={handleInputFocus}
+                                    onBlur={handleInputBlur}
                                     className={errors.phone ? 'error' : ''}
                                 />
                                 {errors.phone && <span className="error-message">{errors.phone}</span>}
@@ -121,7 +149,9 @@ export default function Register() {
                                     name="email"
                                     placeholder="Էլ. Հասցե"
                                     value={data.email}
-                                    onChange={(e) => setData('email', e.target.value)}
+                                    onChange={(e) => handleInputChange(e, 'email')}
+                                    onFocus={handleInputFocus}
+                                    onBlur={handleInputBlur}
                                     className={errors.email ? 'error' : ''}
                                 />
                                 {errors.email && <span className="error-message">{errors.email}</span>}
@@ -137,7 +167,9 @@ export default function Register() {
                                     name="instagram_username"
                                     placeholder="Instagram username"
                                     value={data.instagram_username}
-                                    onChange={(e) => setData('instagram_username', e.target.value)}
+                                    onChange={(e) => handleInputChange(e, 'instagram_username')}
+                                    onFocus={handleInputFocus}
+                                    onBlur={handleInputBlur}
                                     className={errors.instagram_username ? 'error' : ''}
                                 />
                                 {errors.instagram_username && <span className="error-message">{errors.instagram_username}</span>}
@@ -159,7 +191,10 @@ export default function Register() {
                                                     setData('total_price', newQuantity * unitPrice);
                                                 }}
                                             >
-                                                −
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4 8H12" stroke="#05435C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+
                                             </button>
                                             <span className="quantity-value">{quantity}</span>
                                             <button
@@ -172,13 +207,17 @@ export default function Register() {
                                                     setData('total_price', newQuantity * unitPrice);
                                                 }}
                                             >
-                                                +
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4 8H12" stroke="#05435C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M8 12V4" stroke="#05435C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+
                                             </button>
                                         </div>
                                     </div>
                                     <div className="payment-info-row">
                                         <h3>Վճարման ենթակա</h3>
-                                        <h4>{totalPrice} դրամ</h4>
+                                        <h4><span>{totalPrice}</span> դրամ</h4>
                                     </div>
                                 </div>
                             )}
@@ -189,7 +228,7 @@ export default function Register() {
                                         <h5>Նամակ Ջուլիետից</h5>
                                     </div>
                                     <div className='register-form-footer-item'>
-                                        <h3>ամսական վճար</h3>
+                                        <h3>Ամսական Վճար</h3>
                                         <h5><span>3000</span> դրամ/ամիս</h5>
                                     </div>
                                 </div>

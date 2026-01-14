@@ -14,7 +14,7 @@
 }
 
 @font-face {
-    font-family: 'ArTarumianBarakU';
+    font-family: 'ArTarumianBarakUBold';
     src: url('/fonts/ArTarumianBarakU-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
@@ -36,6 +36,15 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'MontserratArmMedium';
+    src: url('/fonts/MontserratArm-Medium.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 
 @theme {

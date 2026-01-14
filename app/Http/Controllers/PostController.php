@@ -68,8 +68,14 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        $relatedPosts = Post::where('id', '!=', $post->id)
+            ->latest()
+            ->take(3)
+            ->get();
+
         return Inertia::render('Blog/Show', [
             'post' => $post,
+            'relatedPosts' => $relatedPosts,
         ]);
     }
 

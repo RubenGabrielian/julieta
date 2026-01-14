@@ -1,1 +1,0 @@
-import{j as i}from"./app-BwKnILH5.js";function n({children:t}){return i.jsx("div",{style:{minHeight:"100vh",display:"flex",flexDirection:"column"},children:i.jsx("main",{children:t})})}export{n as A};

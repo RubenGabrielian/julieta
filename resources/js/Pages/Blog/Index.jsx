@@ -1,6 +1,7 @@
 import { Head, Link } from '@inertiajs/react';
 import AppLayout from '../../Layouts/AppLayout';
 
+
 export default function Index({ posts }) {
     return (
         <>
@@ -93,6 +94,7 @@ export default function Index({ posts }) {
                             ))}
                         </div>
                     )}
+
                 </div>
             </AppLayout>
         </>

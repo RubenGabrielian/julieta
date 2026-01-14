@@ -12,14 +12,14 @@ export default function SendLetter() {
             title: 'Նամակը կգրեմ ինքս',
             description: 'Այս տարբերակում նամակը ուղարկվում է տվյալ',
             price: 2000,
-            priceText: '2000 դրամ',
+            priceText: '<span>2000</span> դրամ',
         },
         {
             id: 'juliet',
             title: 'Նամակը կգրի Ջուլիետը',
             description: 'Այս տարբերակում նամակը ուղարկվում է տվյալ',
             price: 5000,
-            priceText: '5000 դրամ',
+            priceText: '<span>5000</span> դրամ',
         },
     ];
 
@@ -56,9 +56,7 @@ export default function SendLetter() {
                                             <h3>{option.title}</h3>
                                             <p>{option.description}</p>
                                         </div>
-                                        <div className="radio-option-price">
-                                            {option.priceText}
-                                        </div>
+                                        <div className="radio-option-price" dangerouslySetInnerHTML={{ __html: option.priceText }} />
                                     </div>
                                 </label>
                             ))}

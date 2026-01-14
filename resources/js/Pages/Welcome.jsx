@@ -25,14 +25,14 @@ export default function Welcome() {
                         className='main-img'
                         style={{
                             height: '400px',
-                            backgroundImage: "url('/img/welcome.png')",
+                            backgroundImage: "url('/img/welcome-img.png')",
                             backgroundSize: 'contain',
                             backgroundPosition: 'center center',
                             backgroundRepeat: 'no-repeat',
                         }}
                     >
-                        <img src="/img/logo.png" alt="Logo" className='logo' />
-                        <p>Ջուլիետը ուղարկում է թղթային նամակներ, որոնք ունեն այնպիսի տեսք ինչպիսի նամակներ միշտ երազել եմ ստանալ</p>
+                        {/* <img src="/img/logo.png" alt="Logo" className='logo' /> */}
+                        {/* <p>Ջուլիետը ուղարկում է թղթային նամակներ, որոնք ունեն այնպիսի տեսք ինչպիսի նամակներ միշտ երազել եմ ստանալ</p> */}
                     </div>
                     <div className='welcome-page-menu'>
                         <ul>
